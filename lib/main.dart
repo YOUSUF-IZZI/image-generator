@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:image_generator/persentation_layer/pages/home_page.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_generator/utils/app_themes.dart';
+import 'presentation_layer/pages/home_page.dart';
 
 void main() {
-  runApp(const ImageGenerator());
+  runApp(const ProviderScope(child: ImageGenerator()));
 }
 
 class ImageGenerator extends StatelessWidget {
@@ -20,3 +21,10 @@ class ImageGenerator extends StatelessWidget {
   }
 }
 
+
+/* To do:
+* Localizations
+* Animated Loading for home page
+* Add splash Screen
+* Add onboarding page
+*/

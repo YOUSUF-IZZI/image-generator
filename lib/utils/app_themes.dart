@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_generator/utils/app_styles.dart';
 
 
 // Summary: AppThemes class to store all the app themes.
@@ -22,6 +23,10 @@ class AppThemes
       ),
     ),
     scaffoldBackgroundColor: Colors.white,
+    // Text theme
+    textTheme: TextTheme(
+      bodyMedium: AppStyle.styleMedium18.copyWith(color: Colors.black),
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -38,5 +43,9 @@ class AppThemes
       ),
     ),
     scaffoldBackgroundColor: Colors.grey[900],
+    // Text theme
+    textTheme: const TextTheme(
+      bodyMedium: AppStyle.styleMedium18,
+    ),
   );
 }
