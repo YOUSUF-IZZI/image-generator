@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:lottie/lottie.dart';
 import '../../../../utils/app_styles.dart';
 import '../../domain_layer/onboarding_page_model.dart';
@@ -69,10 +68,7 @@ class PageViewComponent extends StatelessWidget {
             //flex: 2,
             child: AspectRatio(
               aspectRatio: 1,
-              child: SvgPicture.asset(
-                model.imagePath,
-                fit: BoxFit.fill,
-              ),
+              child: Lottie.asset(model.imagePath, fit: BoxFit.fill,),
             ),
           ),
         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:image_generator/features/home_page/application_layer/save_image_method.dart';
 import '../state_management/generated_image_provider.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
@@ -24,7 +25,15 @@ class HomePage extends ConsumerWidget {
               print(promptController.text.toString());
             }
           },
-        )
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.download),
+            onPressed: () {
+              saveNetworkImage(ref.read(generatedImageProvider.notifier).getImageUrl());
+            },
+          )
+        ],
       ),
       body: Column(
         children: [
