@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:image_generator/data_layer/open_ai.dart';
-import 'package:image_generator/presentation_layer/state_management/generated_image_provider.dart';
-import 'package:image_generator/presentation_layer/state_management/is_loading_provider.dart';
-import 'package:image_generator/presentation_layer/widgets/custom_text_field.dart';
-import '../../utils/app_styles.dart';
+import 'package:image_generator/utils/app_colors.dart';
+
+import '../../../../utils/app_styles.dart';
+import '../../data_layer/open_ai.dart';
+import '../state_management/generated_image_provider.dart';
+import '../state_management/is_loading_provider.dart';
+import 'custom_text_field.dart';
+
 
 class CustomButton extends ConsumerWidget {
   const CustomButton({super.key});
@@ -20,7 +23,7 @@ class CustomButton extends ConsumerWidget {
       },
       height: 50,
       minWidth: double.infinity,
-      color: Colors.purpleAccent,
+      color: AppColors.primaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),

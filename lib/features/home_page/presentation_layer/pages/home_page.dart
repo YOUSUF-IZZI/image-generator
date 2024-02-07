@@ -1,17 +1,30 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:image_generator/presentation_layer/widgets/custom_button.dart';
-import 'package:image_generator/presentation_layer/widgets/generated_image.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../state_management/generated_image_provider.dart';
+import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
+import '../widgets/generated_image.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Image Generator AI 🤖🔥'),
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.refresh),
+          onPressed: () {
+            promptController.clear();
+            ref.read(generatedImageProvider.notifier).clearImageUrl();
+            if (kDebugMode) {
+              print(promptController.text.toString());
+            }
+          },
+        )
       ),
       body: Column(
         children: [

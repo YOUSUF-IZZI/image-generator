@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:image_generator/presentation_layer/state_management/generated_image_provider.dart';
 import 'package:lottie/lottie.dart';
+import '../state_management/generated_image_provider.dart';
 import '../state_management/is_loading_provider.dart';
 
 class GeneratedImage extends ConsumerWidget {

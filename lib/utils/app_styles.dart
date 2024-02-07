@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 
 abstract class AppStyle
 {
-  // Regular
+  // ############# Light #############
+  static const TextStyle styleLight16 = TextStyle(
+    color: Colors.grey,
+    fontSize: 16,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w300,
+  );
+  // ############# Regular #############
   static const TextStyle styleRegular16 = TextStyle(
     color: Colors.white,
     fontSize: 16,
@@ -10,7 +17,7 @@ abstract class AppStyle
     fontWeight: FontWeight.w400,
   );
 
-  // Medium
+  // ############# Medium #############
   static const TextStyle styleMedium16 = TextStyle(
     color: Colors.white,
     fontSize: 16,
@@ -24,15 +31,21 @@ abstract class AppStyle
     fontWeight: FontWeight.w500,
   );
 
-  // Semi-bold
+  // ############# Semi-bold #############
   static const TextStyle styleSemiBold16 = TextStyle(
     color: Color(0xFF064060),
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle styleSemiBold32 = TextStyle(
+    color: Colors.white,
+    fontSize: 32,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w600,
+  );
 
-  // Bold
+  // ############# Bold #############
   static const TextStyle styleBold16 = TextStyle(
     color: Color(0xFF4EB7F2),
     fontSize: 16,

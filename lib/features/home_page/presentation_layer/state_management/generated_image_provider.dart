@@ -12,6 +12,10 @@ class GeneratedImageNotifier extends StateNotifier<String?>
   void setImageUrl(String? url){
     state = url;
   }
+
+  void clearImageUrl(){
+    state = null;
+  }
 }
 
 
