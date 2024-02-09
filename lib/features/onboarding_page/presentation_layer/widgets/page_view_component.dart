@@ -17,7 +17,7 @@ class PageViewComponent extends StatelessWidget {
             aspectRatio: 1,
             child: Lottie.asset(model.imagePath, fit: BoxFit.fill,),
           ),
-          const Flexible(child: SizedBox(height: 60,)),
+          //const Flexible(child: SizedBox(height: 0,)),
           ShaderMask(
             blendMode: BlendMode.srcIn,
             shaderCallback: (Rect bounds) {
@@ -30,14 +30,14 @@ class PageViewComponent extends StatelessWidget {
             child: Text(
               model.title,
               textAlign: TextAlign.center,
-              style: AppStyle.styleSemiBold32,
+              style: AppStyle.styleSemiBold32(context),
             ),
           ),
           const SizedBox(height: 20,),
           Text(
             model.description,
             textAlign: TextAlign.center,
-            style: AppStyle.styleLight16,
+            style: AppStyle.styleLight16(context),
           )
         ],
       );
@@ -50,22 +50,32 @@ class PageViewComponent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Flexible(child: SizedBox(height: MediaQuery.of(context).size.height * 0.1,)),
-                Text(
-                  model.title,
-                  style: AppStyle.styleSemiBold32,
+                //Flexible(child: SizedBox(height: MediaQuery.of(context).size.height * 0.1,)),
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback: (Rect bounds) {
+                    return const LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: <Color>[Colors.red, Colors.pink, Colors.purple, Colors.blue, Colors.green, Colors.yellow],
+                    ).createShader(bounds);
+                  },
+                  child: Text(
+                    model.title,
+                    textAlign: TextAlign.center,
+                    style: AppStyle.styleSemiBold32(context),
+                  ),
                 ),
                 const SizedBox(height: 20,),
                 Text(
                   model.description,
-                  style: AppStyle.styleLight16,
+                  style: AppStyle.styleLight16(context),
                 ),
               ],
             ),
           ),
           const SizedBox(width: 30,),
           Expanded(
-            //flex: 2,
             child: AspectRatio(
               aspectRatio: 1,
               child: Lottie.asset(model.imagePath, fit: BoxFit.fill,),

@@ -1,0 +1,12 @@
+
+
+{
+  "appBar_name": "Image Generator AI \uD83E\uDD16\uD83D\uDD25",
+  "prompt_text": "Enter your prompt",
+  "prompt_hint_text": "Enter your prompt here...",
+  "generate_button_text": "Generate",
+  "dark_mode": "Dark mode",
+  "languages": "Languages",
+  "contact_us": "Contact us",
+  "link" : "Link"
+}

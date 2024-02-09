@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:image_generator/utils/app_colors.dart';
 
 class DotWidget extends StatelessWidget {
   const DotWidget({super.key, required this.isActive});

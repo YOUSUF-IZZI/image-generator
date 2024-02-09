@@ -15,7 +15,10 @@ class OnboardingNavigationComponents extends ConsumerWidget {
     final pageIndex = ref.watch(pageViewIndexProvider);
     return Column(
       children: [
-        const DotIndicatorWidget(),
+        const Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: DotIndicatorWidget(),
+        ),
         const SizedBox(height: 40),
         OnboardingNavigationButton(pageIndex: pageIndex, controller: controller),
         const SizedBox(height: 30),

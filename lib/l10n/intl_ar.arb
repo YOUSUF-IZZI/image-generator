@@ -1,0 +1,12 @@
+
+
+{
+  "appBar_name": "مولد الصور \uD83E\uDD16\uD83D\uDD25",
+  "prompt_text": "بم تفكر؟",
+  "prompt_hint_text": "قم بإدخال تلميحك هنا...",
+  "generate_button_text": "إنشاء الصورة",
+  "dark_mode": "الوضع الداكن",
+  "languages": "اللغات",
+  "contact_us": "تواصل معنا",
+  "link": "الرابط"
+}

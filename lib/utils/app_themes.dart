@@ -1,11 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:image_generator/utils/app_styles.dart';
-
-
-// Summary: AppThemes class to store all the app themes.
-// The AppThemes class contains two static ThemeData objects, lightTheme and darkTheme.
-// The lightTheme object is used to define the light theme of the app.
-// The darkTheme object is used to define the dark theme of the app.
 
 class AppThemes
 {
@@ -24,9 +17,9 @@ class AppThemes
     ),
     scaffoldBackgroundColor: Colors.white,
     // Text theme
-    textTheme: TextTheme(
+    /*textTheme: TextTheme(
       bodyMedium: AppStyle.styleMedium18.copyWith(color: Colors.black),
-    ),
+    ),*/
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -42,10 +35,19 @@ class AppThemes
         fontWeight: FontWeight.bold,
       ),
     ),
+    // ################# Scaffold theme #################
     scaffoldBackgroundColor: Colors.grey[900],
-    // Text theme
-    textTheme: const TextTheme(
+    // ################# Text theme #################
+    /*textTheme: const TextTheme(
       bodyMedium: AppStyle.styleMedium18,
+    ),*/
+    // ################# Drawer theme #################
+    drawerTheme: DrawerThemeData(
+      backgroundColor: Colors.grey[900],
+    ),
+    // ################# Icon theme #################
+    iconTheme: const IconThemeData(
+      color: Colors.white,
     ),
   );
 }

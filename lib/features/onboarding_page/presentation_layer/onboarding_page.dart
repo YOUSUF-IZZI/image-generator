@@ -9,13 +9,13 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: Column(
           children: [
             Expanded(
-              flex: 4,
+              flex: 6,
               child: CustomPageView(),
             ),
             const OnboardingNavigationComponents(),

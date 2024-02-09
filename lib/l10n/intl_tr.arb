@@ -1,0 +1,13 @@
+
+
+
+{
+  "appBar_name": "Resim Üreteci AI \uD83E\uDD16\uD83D\uDD25",
+  "prompt_text": "Resim açıklaması",
+  "prompt_hint_text": "Resim açıklamasını buraya giriniz...",
+  "generate_button_text": "Resim Üret",
+  "dark_mode": "Karanlık Mod",
+  "languages": "Diller",
+  "contact_us": "Bize Ulaşın",
+  "link": "Bağlantı"
+}

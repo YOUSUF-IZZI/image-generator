@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_generator/utils/app_colors.dart';
-
+import '../../../../generated/l10n.dart';
 import '../../../../utils/app_styles.dart';
 import '../../data_layer/open_ai.dart';
 import '../state_management/generated_image_provider.dart';
@@ -27,14 +27,14 @@ class CustomButton extends ConsumerWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.generating_tokens, color: Colors.white,),
-          SizedBox(width: 5.0),
+          const Icon(Icons.generating_tokens, color: Colors.white,),
+          const SizedBox(width: 5.0),
           Text(
-            'Generate',
-            style: AppStyle.styleRegular16,
+            S.of(context).generate_button_text,
+            style: AppStyle.styleMedium18(context),
           ),
         ],
       ),

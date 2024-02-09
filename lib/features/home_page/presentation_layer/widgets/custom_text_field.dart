@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../generated/l10n.dart';
 
 
 TextEditingController promptController = TextEditingController();
@@ -10,11 +11,11 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       style: TextStyle(
-        color: Theme.of(context).textTheme.bodyMedium!.color,
+        color: Theme.of(context).appBarTheme.titleTextStyle?.color,
       ),
       controller: promptController,
       decoration: InputDecoration(
-        hintText: 'Enter your prompt here...',
+        hintText: S.of(context).prompt_hint_text,
         hintStyle: const TextStyle(
           color: Colors.grey,
         ),

@@ -45,7 +45,7 @@ class OnboardingNavigationButton extends StatelessWidget {
         child: Center(
           child: Text(
             pageIndex < 2 ? 'NEXT' : 'Let\'s Start...',
-            style: AppStyle.styleMedium18.copyWith(color: Colors.white),
+            style: AppStyle.styleMedium18(context).copyWith(color: Colors.white),
           ),
         ),
       )
