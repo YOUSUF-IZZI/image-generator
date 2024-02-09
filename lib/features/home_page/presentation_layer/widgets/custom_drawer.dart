@@ -35,7 +35,7 @@ class CustomDrawer extends ConsumerWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: ListTile(
                     leading: Icon(CupertinoIcons.moon_stars, size: 24, color: Theme.of(context).iconTheme.color,),
-                    title: Text(S.of(context).dark_mode, style: TextStyle(color: Theme.of(context).textTheme.bodyMedium?.color)),
+                    title: Text(S.of(context).dark_mode, style: TextStyle(color: Theme.of(context).appBarTheme.titleTextStyle?.color)),
                     trailing: const ThemeModeSwitcher(),
                   ),
                 ),
@@ -72,12 +72,12 @@ class CustomDrawer extends ConsumerWidget {
               SliverToBoxAdapter(
                 child: ListTile(
                   leading: Icon(CupertinoIcons.link, size: 24, color: Theme.of(context).iconTheme.color,),
-                  title: Text(S.of(context).contact_us, style: TextStyle(color: Theme.of(context).textTheme.bodyMedium?.color,),),
+                  title: Text(S.of(context).contact_us, style: TextStyle(color: Theme.of(context).appBarTheme.titleTextStyle?.color,),),
                   trailing: MaterialButton(
                     onPressed: (){
                       launchUrl(Uri.parse('https://linktr.ee/Yousif_Ezzi'));
                     },
-                    child: Text(S.of(context).link, style: TextStyle(color: Colors.blueAccent, decoration: TextDecoration.underline), ),
+                    child: Text(S.of(context).link, style: const TextStyle(color: Colors.blueAccent, decoration: TextDecoration.underline), ),
                   ),
                 ),
               ),

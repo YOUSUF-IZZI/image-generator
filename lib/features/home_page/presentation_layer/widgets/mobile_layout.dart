@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_generator/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
 import 'custom_button.dart';
 import 'custom_text_field.dart';
@@ -21,7 +22,7 @@ class MobileLayout extends StatelessWidget {
             children: [
               Text(
                 S.of(context).prompt_text,
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: AppStyle.styleMedium20(context).copyWith(color: Theme.of(context).appBarTheme.titleTextStyle?.color),
               ),
               const SizedBox(height: 8),
               const CustomTextField(),

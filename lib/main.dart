@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,7 +14,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await Hive.openBox(AppBoxes.onboardingBox);
-  runApp(DevicePreview(builder: (context) => const ProviderScope(child: ImageGenerator()),));
+  runApp(const ProviderScope(child: ImageGenerator()),);
 }
 
 class ImageGenerator extends ConsumerWidget {
